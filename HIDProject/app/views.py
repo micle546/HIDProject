@@ -39,7 +39,33 @@ def reptiles(request):
         request,
         'app/reptiles.html',
         {
-            'title':'Test',
+            'title':'Reptiles',
+            'message':'test page',
+            'year':datetime.now().year,
+        }
+    )
+
+def mammals(request):
+    """Renders the test page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/mammals.html',
+        {
+            'title':'Mammals',
+            'message':'test page',
+            'year':datetime.now().year,
+        }
+    )
+
+def amphibians(request):
+    """Renders the test page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/amphibians.html',
+        {
+            'title':'Amphibians',
             'message':'test page',
             'year':datetime.now().year,
         }

@@ -57,6 +57,8 @@
     <Folder Include="HIDProject\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\templates\app\mammals.html" />
+    <Content Include="app\templates\app\amphibians.html" />
     <Content Include="app\templates\app\test.html" />
     <Content Include="app\templates\app\reptiles.html" />
     <Content Include="app\templates\app\birds.html" />
@@ -91,6 +93,7 @@
     <Content Include="app\templates\app\login.html" />
     <Content Include="app\templates\app\loginpartial.html" />
     <Content Include=".gitignore" />
+    <Content Include="Procfile" />
   </ItemGroup>
   <ItemGroup>
     <None Include="readme.html">

@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<div class="row">
+<!-- <div class="row">
     <div class="col-md-6">
         <h2>testbirds</h2>
         <p>
@@ -11,9 +11,79 @@
     </div>
 
     <div class="col-md-6">
-        <!--<h2>testH2</h2>-->
+        <h2>testH2</h2>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/DySrS-PZjNM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-</div>
+</div> -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+    * {
+        box-sizing: border-box;
+    }
+
+    /* Splits the screen in two equal halves vertically */
+    .imzcolumn {
+        float: left;
+        width: 50%;
+        padding: 40px;
+    }
+
+    /* Clears the floats after the columns are generated */
+    .imzrow:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    /* Makes the columns stack if the screen is too thin */
+    @media screen and (max-width: 600px) {
+        .imzcolumn {
+            width: 100%;
+        }
+    }
+</style>
+
+
+<body>
+
+    <!-- left column with the picture and description -->
+    <div class="imzrow">
+        <div class="imzcolumn">
+            <img src="../../static/app/content/bird_wireframe.png" alt="Bird Diagram" width="480" height="480">
+
+            <p style="font-size:small; font-family:Verdana">
+                This photograph shows a wide array of different species that all fall in the bird family.
+            </p>
+        </div>
+
+        <!-- right column with the header and detail paragraphs -->
+        <div class="imzcolumn">
+            <h2 style="font-size:x-large; font-family:Verdana"> Birds </h2>
+
+            <hr>
+
+            <p style="font-size:large; font-family:Verdana">
+                Birds are animals that are born from hard-shelled eggs and have feathers 
+                as well as wings.
+            </p>
+
+            <p style="font-size:large; font-family:Verdana">
+                Wings, however, are not the defining feature of birds because there are other 
+                animals that have wings.  Some of these animals include bats and certain insects, 
+                such as flies.
+            </p>
+
+            <p style="font-size:large; font-family:Verdana">
+                Birds are the only animals that have feathers on their body, so this is the 
+                feature that distinguishes them from all other animals.  The feathers on a 
+                bird's body help them to steer their wings while flying.  A bird's feathers also 
+                help to keep it warm in cold temperatures, and sometimes they are used to attract 
+                a significant other through mating rituals.
+            </p>
+        </div>
+    </div>
+</body>
 
 {% endblock %}

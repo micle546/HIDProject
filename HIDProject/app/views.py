@@ -84,6 +84,32 @@ def birds(request):
         }
     )
 
+def fish(request):
+    """Renders the test page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/fish.html',
+        {
+            'title':'Fish',
+            'message':'test page',
+            'year':datetime.now().year,
+        }
+    )
+
+def invertebrates(request):
+    """Renders the test page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/invertebrates.html',
+        {
+            'title':'Invertebrates',
+            'message':'test page',
+            'year':datetime.now().year,
+        }
+    )
+
 def contact(request):
     """Renders the contact page."""
     assert isinstance(request, HttpRequest)

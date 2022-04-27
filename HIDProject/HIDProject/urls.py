@@ -16,6 +16,8 @@ urlpatterns = [
     path('birds/', views.birds, name='birds'),
     path('amphibians/', views.amphibians, name='amphibians'),
     path('mammals/', views.mammals, name='mammals'),
+    path('fish/', views.fish, name='fish'),
+    path('invertebrates/', views.invertebrates, name='invertebrates'),
     path('contact/', views.contact, name='contact'),
     path('about/', views.about, name='about'),
     path('login/',

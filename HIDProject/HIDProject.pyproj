@@ -57,6 +57,8 @@
     <Folder Include="HIDProject\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\templates\app\fish.html" />
+    <Content Include="app\templates\app\invertebrates.html" />
     <Content Include="app\templates\app\mammals.html" />
     <Content Include="app\templates\app\amphibians.html" />
     <Content Include="app\templates\app\test.html" />

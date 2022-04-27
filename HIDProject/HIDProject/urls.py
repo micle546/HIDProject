@@ -20,6 +20,7 @@ urlpatterns = [
     path('invertebrates/', views.invertebrates, name='invertebrates'),
     path('contact/', views.contact, name='contact'),
     path('about/', views.about, name='about'),
+    path('framework/', views.framework, name='framework'),
     path('login/',
          LoginView.as_view
          (

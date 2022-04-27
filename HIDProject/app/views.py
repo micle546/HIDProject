@@ -131,7 +131,20 @@ def about(request):
         'app/about.html',
         {
             'title':'About',
-            'message':'Your application description page.',
+            'message':'HIC Group Project',
+            'year':datetime.now().year,
+        }
+    )
+
+def framework(request):
+    """Renders the about page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/framework.html',
+        {
+            'title':'Framework',
+            'message':'HIC Group Project',
             'year':datetime.now().year,
         }
     )

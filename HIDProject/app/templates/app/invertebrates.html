@@ -2,18 +2,99 @@
 
 {% block content %}
 
-<div class="row">
+<!--<div class="row">
     <div class="col-md-6">
-        <h2>testbirds</h2>
+        <h2>testH1</h2>
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
     </div>
 
     <div class="col-md-6">
-        <!--<h2>testH2</h2>-->
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/DySrS-PZjNM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <h2>testH2</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/S7SLep244ss" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-</div>
+</div>-->
 
-{% endblock %}
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+    * {
+        box-sizing: border-box;
+    }
+
+    /* Splits the screen in two equal halves vertically */
+    .imzcolumn {
+        float: left;
+        width: 50%;
+        padding: 40px;
+    }
+
+    /* Clears the floats after the columns are generated */
+    .imzrow:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    /* Makes the columns stack if the screen is too thin */
+    @media screen and (max-width: 600px) {
+        .imzcolumn {
+            width: 100%;
+        }
+    }
+</style>
+
+
+<body>
+
+    <!-- left column with the header and detail paragraphs -->
+    <div class="imzcolumn">
+        <h2 style="font-size:x-large; font-family:Verdana"> Invertebrates </h2>
+
+        <hr>
+
+        <p style="font-size:large; font-family:Verdana">
+            Invertebrates classify all animals that don't have a spinal cord. As you
+            can imagine, this means that there are quite a few of them! In fact,
+            invertebrates make up most life on Earth.
+        </p>
+
+        <p style="font-size:large; font-family:Verdana">
+            Some typical invertebrates that you may be thinking of is insects like
+            bees and ants, arachnids like spiders, shellfish like lobsters and crabs,
+            arthropods like centipedes and millipedes, and many more!
+        </p>
+
+        <p style="font-size:large; font-family:Verdana">
+            In addition to the typical animals that you may think of when thinking
+            about invertebrates, sea sponges, urchins, and anemones are also
+            invertebrates, and are therefore animals.
+        </p>
+
+        <p style="font-size:large; font-family:Verdana">
+            While generally being thought of as simple and unintelligent, some
+            invertebrates are quite intelligent, such as octopi and other cephalopods.
+        </p>
+    </div>
+    
+
+    <!-- right column with the video and description -->
+    <div class="imzrow">
+        <div class="imzcolumn">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/R4-JJjlbVHc" title="YouTube
+            video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+            gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <p style="font-size:larger; font-family:Verdana">
+                Invertebrates come in all shapes and sizes! Shown here is a video
+                that can help explain the differences between some of them!
+            </p>
+        </div>
+    </div>
+
+</body>
+
+    {% endblock %}

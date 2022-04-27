@@ -1,19 +1,98 @@
-{% extends "app/layout.html" %}
-
-{% block content %}
+<!--{% extends "app/layout.html" %}
+    {% block content %}
 
 <div class="row">
     <div class="col-md-6">
-         <h2>testH1</h2>
-         <p>
-             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-         </p>
+        <h2>testH1</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
     </div>
 
     <div class="col-md-6">
-         <h2>testH2</h2>
-         <iframe width="560" height="315" src="https://www.youtube.com/embed/S7SLep244ss" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <h2>testH2</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/S7SLep244ss" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 </div>
 
 {% endblock %}
+-->
+
+{% extends "app/layout.html" %}
+{% block content %}
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+    * {
+        box-sizing: border-box;
+    }
+
+    /* Splits the screen in two equal halves vertically */
+    .imzcolumn {
+        float: left;
+        width: 50%;
+        padding: 40px;
+    }
+
+    /* Clears the floats after the columns are generated */
+    .imzrow:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    /* Makes the columns stack if the screen is too thin */
+    @media screen and (max-width: 600px) {
+        .imzcolumn {
+            width: 100%;
+        }
+    }
+</style>
+
+
+<body style="background-color:dimgrey">
+
+    <!-- left column with the picture and description -->
+    <div class="imzrow">
+        <div class="imzcolumn">
+            <img src="amphibian_wireframe.png" alt="Lifecycle of a Frog" width="=" 494" height="345">
+
+            <p style="color:white; font-size:15; font-family:Verdana">
+                This diagram shows the lifecycle of a frog, which is an amphibian.
+                Here you can see how from the eggs comes a tadpole, which grows some legs before metamorphosing
+                into a froglet which then loses its tail to become an adult frog.
+            </p>
+        </div>
+
+        <!-- right column with the header and detail paragraphs -->
+        <div class="imzcolumn">
+            <h2 style="color:white; font-size:40; font-family:Verdana"> Amphibians </h2>
+
+            <hr style="color:white">
+            <p style="color:white; font-size:20; font-family:Verdana">
+                Amphibians are vertebrates, meaning they have a spine, that have skin
+                that they can absorb water and gasses through from their environment. They are semi-aquatic,
+                and generally live near a water source so that they can keep their skin moist.
+            </p>
+
+            <p style="color:white; font-size:20; font-family:Verdana">
+                Since their skin is designed to let things through into their bodies,
+                amphibians are especially susceptible to toxins or other contaminants in the environment.
+            </p>
+
+            <p style="color:white; font-size:20; font-family:Verdana">
+                Amphibians lay eggs, and most amphibians have a larval stage in their
+                life cycles. This means they go through some form of metamorphosis where they change from one
+                shape to another while growing up. These larval stages are usually aquatic and generally have
+                gills to breathe in the water. Adult stages usually do not keep their gills and instead breathe
+                with lungs.
+            </p>
+
+            <p style="color:white; font-size:20; font-family:Verdana">
+                Common amphibians include frogs, toads, newts, and salamanders.
+            </p>
+        </div>
+    </div>
+
+    {% endblock %}
